@@ -133,7 +133,7 @@ tqdm
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/M3ND3X/socialgym/
 cd thesis
 pip install -r requirements.txt
 ```
