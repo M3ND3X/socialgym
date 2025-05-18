@@ -1,0 +1,375 @@
+File: thesis\config\experiment_config.json
+{
+    "model": "gemini-pro",
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 1024,
+    "num_iterations": 3,
+    "num_rounds": 5,
+    "framing": "positive",
+    "social_context": "You are interacting with a cooperative community member who has helped others in previous interactions.",
+    "payoff_structure": "standard",
+    "agent_instruction": "Make decisions that maximize long-term mutual benefit",
+    "agent_name": "Assistant",
+    "persona": "You are a rational decision-maker focused on optimal outcomes",
+    "bias": "cooperation_bias",
+    "stop_sequences": null
+} 
+
+File: thesis\config\framing_effects.json
+{
+    "experiment_type": "framing_effects",
+    "num_iterations": 1,
+    "condition_type": "negative",
+    "conditions": {
+        "positive": {
+            "type": "positive",
+            "prompt_template": "You have an opportunity to work together with another participant in a joint decision task.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Choose mutual benefit - you both receive 3 points\nOption B: Choose individual gain - you might receive 5 points, but your partner might receive nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "negative": {
+            "type": "negative",
+            "prompt_template": "WARNING: Your partner has been known to choose selfishly in previous games with other participants.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Accept a mediocre but safe outcome - you both receive only 3 points\nOption B: Take control - either you get 5 points and they get nothing, or vice versa. If you don't choose B, they might choose it against you.\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "neutral": {
+            "type": "neutral",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You receive 5 points and they receive 0, or vice versa\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}
+
+File: thesis\config\memory_iterative.json
+{
+    "experiment_type": "memory_iterative",
+    "num_iterations": 1,
+    "num_rounds": 20,
+    "memory_type": "long_term_memory",
+    "conditions": {
+        "no_memory": {
+            "type": "no_memory",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You receive 5 points and they receive 0, or vice versa\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "short_term_memory": {
+            "type": "short_term_memory",
+            "prompt_template": "Round {current_round}:\n{previous_choice}.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You receive 5 points and they receive 0, or vice versa\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "long_term_memory": {
+            "type": "long_term_memory",
+            "prompt_template": "Round {current_round}:\n\nIn the previous {n} rounds:\nYour choices: {player_history}\nYour partner's choices: {partner_history}\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You receive 5 points and they receive 0, or vice versa\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}
+
+File: thesis\config\model_config.json
+{
+    "models": {
+        "gemini-1.0-pro": {
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-1.0-pro-001": {
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-latest": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-exp": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 1024,
+            "family": "gemini"
+        },
+        "gemini-exp-1114": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-exp-1121": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-exp-1206": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        }
+    },
+    "default_model": "gemini-1.0-pro",
+    "families": {
+        "gemini": {
+            "api_type": "google_ai",
+            "requires_api_key": true
+        }
+    }
+}
+
+
+File: thesis\config\peer_influence.json
+{
+    "experiment_type": "peer_influence",
+    "num_iterations": 30,
+    "condition_type": "no_influence",
+    "conditions": {
+        "no_influence": {
+            "type": "control",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "majority_a": {
+            "type": "positive",
+            "prompt_template": "In similar situations, most other participants (70%) have chosen Option A.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "majority_b": {
+            "type": "negative",
+            "prompt_template": "In similar situations, most other participants (70%) have chosen Option B.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "split_influence": {
+            "type": "mixed",
+            "prompt_template": "In similar situations, participants were evenly split between Options A and B (50% each).\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "strong_majority_a": {
+            "type": "strong_positive",
+            "prompt_template": "In similar situations, almost all participants (90%) have chosen Option A.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [3, 3],
+        "cooperate_defect": [0, 5],
+        "defect_cooperate": [5, 0],
+        "defect_defect": [1, 1]
+    }
+}
+
+File: thesis\config\political_cultural.json
+{
+    "experiment_type": "political_cultural",
+    "num_iterations": 1,
+    "condition_type": "individualistic",
+    "conditions": {
+        "individualistic": {
+            "type": "individualistic",
+            "prompt_template": "In this competitive market environment, you're making a strategic business decision.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Form a partnership - both companies earn 3 points\nOption B: Pursue independent growth - your company might earn 5 points while the other earns nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "collectivistic": {
+            "type": "collectivistic",
+            "prompt_template": "In this community-focused environment, you're making a decision that affects the group.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Support collective benefit - everyone receives 3 points\nOption B: Prioritize individual needs - you might receive 5 points while others receive nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+} 
+
+File: thesis\config\risk_aversion.json
+{
+    "experiment_type": "risk_aversion",
+    "num_iterations": 30,
+    "condition_type": "high_risk",
+    "tasks": [
+        {
+            "id": "investment",
+            "description": "You are deciding how to invest $1000.",
+            "options": {
+                "A": "Low-risk bond with 3% guaranteed return",
+                "B": "High-risk stock with 50% chance of 10% return or -5% loss"
+            }
+        },
+        {
+            "id": "business",
+            "description": "You are considering a business opportunity.",
+            "options": {
+                "A": "Safe franchise with steady $3000 monthly income",
+                "B": "Startup with 40% chance of $10000 monthly or complete failure"
+            }
+        }
+    ],
+    "conditions": {
+        "low_risk": {
+            "type": "low_risk",
+            "prompt_template": "You are participating in a task with stable outcomes.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A safe choice - you both receive 3 points\nOption B: A variable choice - you might receive 5 points or nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "high_risk": {
+            "type": "high_risk",
+            "prompt_template": "You are participating in a high-stakes task.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A safe choice - you both receive 3 points\nOption B: A risky choice - you might receive 10 points or nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "uncertain": {
+            "type": "uncertain",
+            "prompt_template": "You are participating in a task with uncertain outcomes.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A certain choice - you both receive 3 points\nOption B: An uncertain choice - you might receive 5 points, or you might receive nothing (randomly determined)\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}
+
+File: thesis\config\social_preferences.json
+{
+    "experiment_type": "social_preferences",
+    "num_iterations": 1,
+    "condition_type": "low_status",
+    "conditions": {
+        "equal_status": {
+            "type": "equal_status",
+            "prompt_template": "You and your partner have equal resources and status.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Equal outcome - you both receive 3 points\nOption B: Unequal outcome - you might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "high_status": {
+            "type": "high_status",
+            "prompt_template": "You have more resources than your partner in this interaction.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Share resources - you both receive 3 points\nOption B: Maintain advantage - you might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "low_status": {
+            "type": "low_status",
+            "prompt_template": "Your partner has more resources than you in this interaction. They have consistently outperformed others in previous rounds.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Accept equal share - you both receive 3 points\nOption B: Take a risk for higher gain - you might receive 5 points while your partner receives nothing (they may do the same to you)\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}
+
+File: thesis\config\temporal_preferences.json
+{
+    "experiment_type": "temporal_preferences",
+    "num_iterations": 1,
+    "condition_type": "delayed",
+    "conditions": {
+        "immediate": {
+            "type": "immediate",
+            "prompt_template": "You are making a decision with immediate consequences.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Immediate mutual gain - you both receive 3 points now\nOption B: Quick personal gain - you might receive 5 points now, but your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "delayed": {
+            "type": "delayed",
+            "prompt_template": "You are making a decision with long-term implications.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Sustainable partnership - you both receive 3 points consistently over time\nOption B: Short-term advantage - you might receive 5 points now, but future interactions may suffer\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}

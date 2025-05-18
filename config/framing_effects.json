@@ -1,0 +1,37 @@
+{
+    "experiment_type": "framing_effects",
+    "num_iterations": 1,
+    "condition_type": "negative",
+    "conditions": {
+        "positive": {
+            "type": "positive",
+            "prompt_template": "You have an opportunity to work together with another participant in a joint decision task.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Choose mutual benefit - you both receive 3 points\nOption B: Choose individual gain - you might receive 5 points, but your partner might receive nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "negative": {
+            "type": "negative",
+            "prompt_template": "WARNING: Your partner has been known to choose selfishly in previous games with other participants.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Accept a mediocre but safe outcome - you both receive only 3 points\nOption B: Take control - either you get 5 points and they get nothing, or vice versa. If you don't choose B, they might choose it against you.\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "neutral": {
+            "type": "neutral",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You receive 5 points and they receive 0, or vice versa\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}

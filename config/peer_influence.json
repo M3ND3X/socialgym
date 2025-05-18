@@ -1,0 +1,33 @@
+{
+    "experiment_type": "peer_influence",
+    "num_iterations": 30,
+    "condition_type": "no_influence",
+    "conditions": {
+        "no_influence": {
+            "type": "control",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "majority_a": {
+            "type": "positive",
+            "prompt_template": "In similar situations, most other participants (70%) have chosen Option A.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "majority_b": {
+            "type": "negative",
+            "prompt_template": "In similar situations, most other participants (70%) have chosen Option B.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "split_influence": {
+            "type": "mixed",
+            "prompt_template": "In similar situations, participants were evenly split between Options A and B (50% each).\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "strong_majority_a": {
+            "type": "strong_positive",
+            "prompt_template": "In similar situations, almost all participants (90%) have chosen Option A.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [3, 3],
+        "cooperate_defect": [0, 5],
+        "defect_cooperate": [5, 0],
+        "defect_defect": [1, 1]
+    }
+}

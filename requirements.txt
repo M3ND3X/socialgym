@@ -1,0 +1,8 @@
+google-generativeai
+pandas
+numpy
+python-dotenv
+matplotlib
+seaborn
+scipy 
+tqdm

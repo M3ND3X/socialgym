@@ -1,0 +1,33 @@
+{
+    "experiment_type": "political_cultural",
+    "num_iterations": 1,
+    "condition_type": "individualistic",
+    "conditions": {
+        "individualistic": {
+            "type": "individualistic",
+            "prompt_template": "In this competitive market environment, you're making a strategic business decision.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Form a partnership - both companies earn 3 points\nOption B: Pursue independent growth - your company might earn 5 points while the other earns nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "collectivistic": {
+            "type": "collectivistic",
+            "prompt_template": "In this community-focused environment, you're making a decision that affects the group.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Support collective benefit - everyone receives 3 points\nOption B: Prioritize individual needs - you might receive 5 points while others receive nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+} 

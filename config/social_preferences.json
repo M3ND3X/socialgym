@@ -1,0 +1,37 @@
+{
+    "experiment_type": "social_preferences",
+    "num_iterations": 1,
+    "condition_type": "low_status",
+    "conditions": {
+        "equal_status": {
+            "type": "equal_status",
+            "prompt_template": "You and your partner have equal resources and status.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Equal outcome - you both receive 3 points\nOption B: Unequal outcome - you might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "high_status": {
+            "type": "high_status",
+            "prompt_template": "You have more resources than your partner in this interaction.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Share resources - you both receive 3 points\nOption B: Maintain advantage - you might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "low_status": {
+            "type": "low_status",
+            "prompt_template": "Your partner has more resources than you in this interaction. They have consistently outperformed others in previous rounds.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Accept equal share - you both receive 3 points\nOption B: Take a risk for higher gain - you might receive 5 points while your partner receives nothing (they may do the same to you)\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}

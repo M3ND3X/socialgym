@@ -1,0 +1,29 @@
+{
+    "experiment_type": "emotional_priming",
+    "num_iterations": 30,
+    "condition_type": "neutral",
+    "conditions": {
+        "neutral": {
+            "type": "neutral",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "empathy": {
+            "type": "empathy",
+            "prompt_template": "Think about how your decision will affect your partner's wellbeing and circumstances.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "competitive": {
+            "type": "competitive",
+            "prompt_template": "Consider that in this competitive environment, every point matters for your final ranking.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "collaborative": {
+            "type": "collaborative",
+            "prompt_template": "Remember that mutual success can lead to better outcomes for everyone involved.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [3, 3],
+        "cooperate_defect": [0, 5],
+        "defect_cooperate": [5, 0],
+        "defect_defect": [1, 1]
+    }
+} 

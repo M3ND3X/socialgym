@@ -1,0 +1,294 @@
+{
+    "models": {
+
+            "gemma-3-1b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+
+            "gemma-3-4b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+            "gemma-7b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+            "gemma2-9b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+            "gemma-3-12b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+            "gemma-3-27b-it": {
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40,
+                "max_output_tokens": 1024,
+                "family": "gemma"
+            },
+        "gemini-1.5-flash": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+
+        "gemini-1.5-flash-001": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-001-tuning": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-002": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b-001": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b-exp-0827": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b-exp-0924": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-8b-latest": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-flash-latest": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-pro": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-pro-001": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-pro-002": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-1.5-pro-latest": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-001": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-exp": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-exp-image-generation": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-lite": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-lite-001": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-lite-preview": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-lite-preview-02-05": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-preview-image-generation": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-thinking-exp": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-thinking-exp-01-21": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-flash-thinking-exp-1219": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-pro-exp": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.0-pro-exp-02-05": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.5-flash-preview-04-17": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.5-flash-preview-04-17-thinking": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.5-pro-exp-03-25": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.5-pro-preview-03-25": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-2.5-pro-preview-05-06": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        },
+        "gemini-exp-1206": {
+            "temperature": 0.9,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+            "family": "gemini"
+        }
+    },
+    "default_model": "gemini-1.5-flash",
+    "families": {
+        "gemini": {
+            "api_type": "google_ai",
+            "requires_api_key": true
+        }
+    }
+}

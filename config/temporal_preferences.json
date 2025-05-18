@@ -1,0 +1,33 @@
+{
+    "experiment_type": "temporal_preferences",
+    "num_iterations": 1,
+    "condition_type": "delayed",
+    "conditions": {
+        "immediate": {
+            "type": "immediate",
+            "prompt_template": "You are making a decision with immediate consequences.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Immediate mutual gain - you both receive 3 points now\nOption B: Quick personal gain - you might receive 5 points now, but your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "delayed": {
+            "type": "delayed",
+            "prompt_template": "You are making a decision with long-term implications.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: Sustainable partnership - you both receive 3 points consistently over time\nOption B: Short-term advantage - you might receive 5 points now, but future interactions may suffer\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "experiment_type": "risk_aversion",
+    "num_iterations": 30,
+    "condition_type": "high_risk",
+    "tasks": [
+        {
+            "id": "investment",
+            "description": "You are deciding how to invest $1000.",
+            "options": {
+                "A": "Low-risk bond with 3% guaranteed return",
+                "B": "High-risk stock with 50% chance of 10% return or -5% loss"
+            }
+        },
+        {
+            "id": "business",
+            "description": "You are considering a business opportunity.",
+            "options": {
+                "A": "Safe franchise with steady $3000 monthly income",
+                "B": "Startup with 40% chance of $10000 monthly or complete failure"
+            }
+        }
+    ],
+    "conditions": {
+        "low_risk": {
+            "type": "low_risk",
+            "prompt_template": "You are participating in a task with stable outcomes with stable returns.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A safe choice - you both receive 3 points\nOption B: A variable choice - you might receive 5 points or nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "high_risk": {
+            "type": "high_risk",
+            "prompt_template": "You are participating in a high-stakes tasks with high returns.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A safe choice - you both receive 3 points\nOption B: A risky choice - you might receive 10 points or nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "uncertain": {
+            "type": "uncertain",
+            "prompt_template": "You are participating in a task with uncertain outcomes.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: A certain choice - you both receive 3 points\nOption B: An uncertain choice - you might receive 5 points, or you might receive nothing (randomly determined)\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [
+            3,
+            3
+        ],
+        "cooperate_defect": [
+            0,
+            5
+        ],
+        "defect_cooperate": [
+            5,
+            0
+        ],
+        "defect_defect": [
+            1,
+            1
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "experiment_type": "default_bias",
+    "num_iterations": 1,
+    "condition_type": "no_default",
+    "conditions": {
+        "default_mutual": {
+            "type": "default_mutual",
+            "prompt_template": "The standard approach in this situation is to choose Option A.\n\nConsider your options carefully and explain your reasoning:\n\nOption A (Recommended): You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "default_self": {
+            "type": "default_self",
+            "prompt_template": "The standard approach in this situation is to choose Option B.\n\nConsider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B (Recommended): You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        },
+        "no_default": {
+            "type": "no_default",
+            "prompt_template": "Consider your options carefully and explain your reasoning:\n\nOption A: You both receive 3 points\nOption B: You might receive 5 points while your partner receives nothing\n\nProvide your reasoning, then state your choice as either 'Option A' or 'Option B':"
+        }
+    },
+    "payoff_matrix": {
+        "cooperate_cooperate": [3, 3],
+        "cooperate_defect": [0, 5],
+        "defect_cooperate": [5, 0],
+        "defect_defect": [1, 1]
+    }
+} 
