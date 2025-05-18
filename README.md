@@ -146,10 +146,6 @@ pip install -r requirements.txt
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-[Your License Here]
-
 ## Contact
 
-[Your Contact Information]
+mendexofficial@gmail.com | +251982838683
