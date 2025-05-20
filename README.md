@@ -134,8 +134,11 @@ tqdm
 
 ```bash
 git clone https://github.com/M3ND3X/socialgym/
-cd thesis
 pip install -r requirements.txt
+
+if you want to run GUI
+
+python app.py
 ```
 
 ## Contributing
