@@ -151,4 +151,4 @@ python app.py
 
 ## Contact
 
-mendexofficial@gmail.com | +251982838683
+mendexofficial@gmail.com
