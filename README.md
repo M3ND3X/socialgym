@@ -136,7 +136,7 @@ tqdm
 git clone https://github.com/M3ND3X/socialgym/
 pip install -r requirements.txt
 
-if you want to run GUI
+## if you want to run GUI
 
 python app.py
 ```
